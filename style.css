@@ -1,0 +1,122 @@
+/* --- Basic Reset & Setup --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+    min-height: 100vh;
+}
+
+/* --- Main Container --- */
+.todo-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #1e1e1e; /* Slightly lighter card background */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Form Elements --- */
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #252525;
+    color: #e0e0e0;
+    font-size: 1rem;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight color */
+}
+
+#priority-input, #task-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+#task-form button {
+    background-color: #007bff;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+#task-form button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Task List --- */
+#task-list {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 5px solid; /* This will be the priority indicator */
+    transition: background-color 0.2s ease;
+}
+
+/* Priority Colors */
+.task-item[data-priority="low"] { border-color: #28a745; } /* Green */
+.task-item[data-priority="medium"] { border-color: #ffc107; } /* Yellow */
+.task-item[data-priority="high"] { border-color: #dc3545; } /* Red */
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    color: #999;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+.task-actions button:hover {
+    color: #fff;
+}
