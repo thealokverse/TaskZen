@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="todo-container">
+        <header>
+            <h1>My Tasks ✅</h1>
+        </header>
+
+        <form id="task-form">
+            <input 
+                type="text" 
+                id="task-input" 
+                placeholder="e.g., Finish my portfolio project" 
+                autocomplete="off"
+            >
+            <select id="priority-input">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <ul id="task-list">
+            </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
